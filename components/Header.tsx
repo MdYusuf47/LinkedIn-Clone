@@ -1,3 +1,4 @@
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import {
   Briefcase,
   HomeIcon,
@@ -8,6 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 
 const Header = () => {
   return (
@@ -48,6 +50,17 @@ const Header = () => {
           <MessagesSquare className="h-5" />
           <p>Messaging</p>
         </Link>
+
+      <SignedIn>
+        <UserButton/>
+      </SignedIn>
+
+      <SignedOut>
+        <Button asChild variant="secondary">
+          <SignInButton/>
+        </Button>
+      </SignedOut>
+
       </div>
     </div>
   );
