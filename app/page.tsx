@@ -9,12 +9,12 @@ export default function Home() {
         <UserInformation/>
       </section>
 
-      <section>
+      <section className="col-span-full md:col-span-6 xl:col-span-4 xl:max-w-xl mx-auto w-full">
         {/* postform */}
         {/* postfeed */}
       </section>
 
-      <section>{/* wedget */}</section>
+      <section className="hidden xl:inline justify-center col-span-2">{/* wedget */}</section>
     </div>
   );
 }
